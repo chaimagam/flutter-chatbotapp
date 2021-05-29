@@ -6,7 +6,7 @@ app = Flask(__name__)
 
 # response
 def response():
-    query = dict(request.from)['query']
+    query = dict(request.form)['query']
     result = query + " " + time.ctime()
     return jsonify({"response" : result})
 
